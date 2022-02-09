@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import Button from './Button';
+import Title from './ButtonStyle';
 import './App.css';
 
 function App() {
-  const [state, setState] = useState<string>('')
 
-  useEffect(() => {
-    const id = document.getElementById('hiß∂')?.id || '';
-    setState(id);
-  }, [])
   return (
     <div className="App">
       <header className="App-header">
-          <Button id="hiß∂" name="one">Hi</Button>
-          {state}
+          <Button name="checkbutton" id="hiß∂">Hi</Button>
+          <Title style={{background: "blue", fontSize: '30px'}} id="header" isActive={true}>H1</Title>
       </header>
     </div>
   );
